@@ -1,1 +1,0 @@
-start 'C:\Program Files (x86)\Foxit Software\Foxit Reader\FoxitReader.exe' .\thesis.pdf
