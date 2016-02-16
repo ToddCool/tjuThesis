@@ -145,10 +145,6 @@
 \fi
 \urlstyle{same}
 \RequirePackage{hypernat}
-\RequirePackage{caption}
-\RequirePackage{topsection}
-\RequirePackage[perpage]{footmisc}
-%\RequirePackage{perpage}
 
 \renewcommand\frontmatter{%
   \if@openright\cleardoublepage\else\clearpage\fi
