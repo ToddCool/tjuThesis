@@ -250,7 +250,7 @@
 \renewcommand{\chaptermark}[1]{\@mkboth{\@chapapp\  ~~#1}{}}
 \newlength\CJK@twochars
 \ifxetex
-  \def\CJK@spaceChar{\Unicode{48}{7}}
+  \def\CJK@spaceChar{\hspace{1em}}
 \else
   \iftongji@UTF
     \def\CJK@spaceChar{\CJKchar{"080}{"080}}
