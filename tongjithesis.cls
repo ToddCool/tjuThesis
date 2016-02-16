@@ -493,6 +493,9 @@
 \tongji@define@term{cmajorsecond}
 \def\csubject{\cmajorsecond} % for compatibility
 
+\tongji@define@term{cstnr}
+\tongji@define@term{degtype}
+\tongji@define@term{edispline}
 \tongji@define@term{cauthor}
 \tongji@define@term{csupervisor}
 \tongji@define@term{cassosupervisor}
@@ -541,12 +544,13 @@
     \vspace*{0.4cm}
     \parbox[b][1.8cm][t]{\textwidth}{%
       \hspace*{11.2cm}\iftongji@secret{\sanhao\tongji@secret@title}\else\rule{1cm}{0cm}\fi\\[0.1cm]
-      \hspace*{-0.1cm}\includegraphics[scale=0.16]{tongjilogo.png}}
+      \centering{\includegraphics[scale=0.9]{tongji-whole-logo.png}}}
+      \vskip 0.4cm% 这里添加距离 张泽
           \parbox[t][9cm][t]{\paperwidth-10cm}{
       \renewcommand{\baselinestretch}{1}
       \begin{center}
-            \sanhao[1]{\tongji@capply}\par\vskip 1.4cm
-            \yihao[2]\textbf{\hei\tongji@ctitle}\par\vskip 17pt
+            \erhao[1]{\li{\tongji@capply}}\par\vskip 1cm % 适当减小这个距离 origianl:1.4cm
+            \erhao[2]\textbf{\hei\tongji@ctitle}\par\vskip 17pt % 17pt
      \ifx\cfunds\@empty\else
             \xiaosi{\tongji@cfunds}
              \par\vskip 20bp\fi
@@ -561,10 +565,11 @@
           \else
       \begin{tabular}{p{\tongji@title@width}c@{\extracolsep{8pt}}p{7cm}l}
           \fi
-              \tongji@put@title{\tongji@cdepartmenttitle}  & \tongji@title@sep & {\ziju{3bp}\tongji@cdepartment}\\
-              \tongji@put@title{\tongji@cmajortitlefirst}       & \tongji@title@sep & {\ziju{3bp}\tongji@cmajorfirst}\\
-              \tongji@put@title{\tongji@cmajortitlesecond} & \tongji@title@sep & {\ziju{3bp}\tongji@cmajorsecond}\\
-              \tongji@put@title{\tongji@cauthortitle}      & \tongji@title@sep & {\ziju{3bp}\tongji@cauthor}\\
+             \tongji@put@title{\tongji@cauthorname}        & \tongji@title@sep & {\ziju{3bp}\tongji@cauthor}\\
+			  \tongji@put@title{\tongji@cauthornr}        & \tongji@title@sep & {\ziju{3bp}\tongji@cstnr}\\
+			  \tongji@put@title{\tongji@cdepartmenttitle}        & \tongji@title@sep & {\ziju{3bp}\tongji@cdepartment}\\
+			  \tongji@put@title{\tongji@cdisplinetype}        & \tongji@title@sep & {\ziju{3bp}\tongji@degtype}\\
+			  \tongji@put@title{\tongji@cmajorname}        & \tongji@title@sep & {\ziju{3bp}\tongji@cmajorfirst}\\
               \tongji@put@title{\tongji@csupervisortitle}  & \tongji@title@sep & {\ziju{3bp}\tongji@csupervisor}\\
               \ifx\tongji@cassosupervisor\@empty\else
           \tongji@put@title{\tongji@cassosupertitle} & \tongji@title@sep & {\ziju{3bp}\tongji@cassosupervisor}\\
@@ -584,8 +589,8 @@
     \vspace*{0.4cm}
     \parbox[b][1.8cm][t]{\textwidth}{%
       \hspace*{11.2cm}\iftongji@secret{\sanhao\tongji@secret@title}\else\rule{1cm}{0cm}\fi\\[-0.1cm]
-      \hspace*{-0.1cm}\includegraphics[scale=0.16]{tongjilogo.png}}
-      \vskip -0.9cm
+      \centering{\includegraphics[scale=0.9]{tongji-whole-logo.png}}}
+      \vskip 0.4cm% 这里添加距离 张泽
     \parbox[t][9cm][t]{\paperwidth-6cm}{
       \renewcommand{\baselinestretch}{1}
       \begin{center}
@@ -595,22 +600,24 @@
              \par\vskip 20bp\fi
       \end{center}}
        \vskip 0.5cm
-      \hspace*{1.6cm}\parbox[t][8.7cm][t]{\textwidth}{\sanhao[1.5]
+      \hspace*{0.5cm}\parbox[t][8.7cm][t]{\textwidth}{\sanhao[1.5] % default: 1.6cm 调整表格左面开始位置 张泽
         \begin{center}
-        \begin{tabular}{lp{7cm}l}
+        \begin{tabular}{ll}%lp{7cm}l 张泽 修改
+          Candidate :& \tongji@eauthor\\
+          Student Number :& \tongji@cstnr\\
           School/Department :& \tongji@edepartment\\
-          Discipline : & \tongji@emajorfirst\\
-          Major : & \tongji@emajorsecond\\
-          Candidate :& \tongji@eauthor\\ 
-              Supervisor : & \tongji@esupervisor\\
-        \ifx\tongji@eassosupervisor\@empty
+          Discipline : & \tongji@edispline\\
+          Major : & \tongji@emajorfirst\\
+          Supervisor : & \tongji@esupervisor\\
+		\ifx\tongji@eassosupervisor\@empty
           \else Associate Supervisor : & \tongji@eassosupervisor\\\fi
         \ifx\tongji@ecosupervisor\@empty
           \else Cooperate Supervisor : & \tongji@ecosupervisor\\\fi
       \end{tabular}
     \end{center}}
+    \vspace*{-1cm}
      \begin{center}
-       \sanhao\bfseries\sffamily\tongji@edate
+       {\sanhao\tongji@edate}
      \end{center}
 \end{center}} % end of english cover
 
