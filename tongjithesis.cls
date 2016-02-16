@@ -78,12 +78,12 @@
 \RequirePackage{amsmath,thmtools,amssymb}
 \RequirePackage{txfonts}
 \RequirePackage{graphicx}
-\RequirePackage{subfig}
+\RequirePackage[config]{subfig}
 \RequirePackage{indentfirst}
 \RequirePackage[neverdecrease]{paralist}
 \iftongji@xetex
   \RequirePackage{xunicode,xltxtra}
-  \RequirePackage[CJKspace,CJKmath]{xeCJK}
+  \RequirePackage[CJKnumber]{xeCJK}
   \RequirePackage{CJKnumb}
   \punctstyle{kaiming}
   % todo: minor fix of CJKnumb
@@ -93,7 +93,7 @@
   \setCJKsansfont{Adobe Heiti Std}
   \setCJKmonofont{Adobe Kaiti Std}
   \setCJKfamilyfont{song}{Adobe Song Std}
-  \setCJKfamilyfont{hei}{Adobe Heiti Std}
+  \setCJKfamilyfont{hei}{STHeiti}
   \setCJKfamilyfont{fs}{Adobe Fangsong Std}
   \setCJKfamilyfont{kai}{Adobe Kaiti Std}
   \setCJKfamilyfont{li}{Adobe Kaiti Std} % todo: 用隶书字体代替
