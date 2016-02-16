@@ -96,7 +96,7 @@
   \setCJKfamilyfont{hei}{STHeiti}
   \setCJKfamilyfont{fs}{Adobe Fangsong Std}
   \setCJKfamilyfont{kai}{Adobe Kaiti Std}
-  \setCJKfamilyfont{li}{Adobe Kaiti Std} % todo: 用隶书字体代替
+  \setCJKfamilyfont{li}{STBaoli-SC-Regular}
   \setCJKfamilyfont{you}{Adobe Kaiti Std} % todo: 用幼圆字体代替
 
   \setmainfont{Times New Roman}
