@@ -4,6 +4,16 @@ would like to use here]
 % Define default figure width
 \def \deffigwidth {0.6\linewidth}
 
+% Enable code highlighting and auto-wrapping
+\RequirePackage{listings}
+\lstset{numbers=left, numberstyle=\tiny,
+keywordstyle=\color{blue!70},
+commentstyle=\color{red!90},
+rulesepcolor=\color{red!20!green!20!blue!20},
+extendedchars=false,
+escapechar=`,language=Matlab,
+breaklines=true,showstringspaces=false}
+
 % 处理数学公式中的黑斜体的宏包
 %\RequirePackage{bm}
 
